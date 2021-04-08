@@ -1,0 +1,1 @@
+web: java -Dspring.data.mongodb.host=${MONGODB_HOST} -Dspring.data.mongodb.username=${MONGODB_USERNAME} -Dspring.data.mongodb.password=${MONGODB_PASSWORD} -Dserver.port=$PORT -Dspring.data.mongodb.authentication-database=glecun_idlebattlegame -Dspring.data.mongodb.database=glecun_idlebattlegame $JAVA_OPTS -jar build/libs/*.jar
