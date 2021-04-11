@@ -39,4 +39,24 @@ class User(private val username: String, val email: String, private val password
     fun setPassword(encryptedPassword: String): User {
         return User(username, email, encryptedPassword)
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as User
+
+        if (username != other.username) return false
+        if (email != other.email) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = username.hashCode()
+        result = 31 * result + email.hashCode()
+        return result
+    }
+
+
 }
