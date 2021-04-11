@@ -2,7 +2,7 @@ package com.glecun.idlebattleapi.application.dto
 
 import com.glecun.farmergameapi.domain.entities.User
 
-class UserJson(val username: String, val email: String, val password: String?) {
+data class UserJson(val username: String, val email: String, val password: String?) {
 
     fun toUser(): User {
         return User(username, email, password!!)

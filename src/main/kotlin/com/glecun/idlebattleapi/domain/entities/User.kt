@@ -5,7 +5,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 import java.util.*
 
-class User(private val username: String, val email: String, private val password: String) : UserDetails {
+data class User(private val username: String, val email: String, private val password: String) : UserDetails {
 
     override fun getAuthorities(): Collection<GrantedAuthority?> {
         val simpleGrantedAuthority = SimpleGrantedAuthority("USER")

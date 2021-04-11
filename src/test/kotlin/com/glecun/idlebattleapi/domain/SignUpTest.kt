@@ -1,5 +1,3 @@
-package com.glecun.farmergameapi.domain
-
 import com.glecun.farmergameapi.domain.entities.User
 import com.glecun.idlebattleapi.domain.SignUp
 import com.glecun.idlebattleapi.domain.port.UserPort

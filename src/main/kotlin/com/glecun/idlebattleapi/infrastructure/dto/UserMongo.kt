@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
 @Document("user")
-class UserMongo(val username: String, val email: String, val password: String) {
+data class UserMongo(val username: String, val email: String, val password: String) {
     @Id
     var id: String? = null;
 
@@ -18,5 +18,4 @@ class UserMongo(val username: String, val email: String, val password: String) {
     fun toUser(): User {
         return User(username, email, password)
     }
-
 }
