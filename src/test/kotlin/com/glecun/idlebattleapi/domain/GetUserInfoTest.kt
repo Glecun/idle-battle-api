@@ -24,6 +24,6 @@ class GetUserInfoTest {
 
         getUserInfo?.execute(email);
 
-        Mockito.verify(userInfoPort)?.save(UserInfo(null, email, 50))
+        Mockito.verify(userInfoPort)?.save(UserInfo(null, email, 50, false, 0))
     }
 }
